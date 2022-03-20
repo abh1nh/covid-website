@@ -77,12 +77,13 @@ export const FetchCovidData = () => {
 }
 
 export default function App() {
+  /*
   const [CovidData, setCovidData] = useState([]);
 
   useEffect(() => {
     setCovidData(FetchCovidData())
   }, [])
-  
+  */
   return (
 
     <div className="App">
