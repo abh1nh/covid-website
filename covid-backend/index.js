@@ -3,7 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 const covidstat = require('./models/covidstat');
 const app = express()
-const port = 2000
+const port = 3080
 
 
 mongoose.connect('mongodb+srv://abhi:abhi@covidcluster.1avnt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
