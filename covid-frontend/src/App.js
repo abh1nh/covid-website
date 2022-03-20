@@ -1,4 +1,6 @@
 import "./App.css";
+import "./charts.css"
+import virus from './images/virus.png';
 import BarChart from './Components/BarChart';
 import DoughnutChart from "./Components/DoughnutChart";
 import PieChart from "./Components/PieChart";
@@ -87,41 +89,44 @@ export default function App() {
   return (
 
     <div className="App">
+      <div class="section1">
+        <div class="row">
+          <div class="column">
+            <div class="covid_19_header">COVID-19</div>
+            <p class="subheader">DATA VISUALIZATION</p>
+            <p class="header_description">WELCOME TO THIS DATAT VISUALIZATION PROJECT AIMED AT</p>
+            <p class="header_description">DISPLAYING IMPORTANT INFORMATION ABOUT OUR GLOBAL </p>
+            <p class="header_description">PANDEMIC IN AN INTUITIVE FASHION</p>
+          </div>
+          <div class="column">
+            <div class="imgbox">
+              <img src={virus} alt="virus picture" class="responsiveimg" />
+              </div>
+          </div>
+        </div>
+      </div>
     
-    <div className='block1'>
-      <h1 className='head'>Covid-19</h1>  
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    </div>  
+      <div class="section2">
+        <div class="row">
+          <div class="onecolumn">
+            <div class = "bar">
+              <BarChart ChartData={ CovidData }/>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <PieChart ChartData={ CovidData }/>
+          </div>
 
-    <div className='block2'>
-      <div className="bar" style={{width:500}}>
-        <BarChart ChartData={ CovidData }/>
+          <div class="column">
+            <DoughnutChart ChartData={ CovidData }/>
+          </div>
+        </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="pie" style={{width:500}}>
-        <PieChart ChartData={ CovidData }/>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="doughnut" style={{width:500}}>
-        <DoughnutChart ChartData={ CovidData }/>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="combined" style={{width:500}}>
-        <CombinedChart ChartData={ CovidData }/>
-      </div>
-    </div>
 
-    </div>
+    
   );
 }
 

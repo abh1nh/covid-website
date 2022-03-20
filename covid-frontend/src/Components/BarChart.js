@@ -10,17 +10,21 @@ function BarChart({ ChartData }) {
       label: 'Coronavirus Cases',
       data: ChartData.map((data) => data.CoronavirusCases),
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(255, 205, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(54, 162, 235, 0.2)'
+        'rgb(255, 99, 132)',
+        'rgb(255, 159, 64)',
+        'rgb(255, 205, 86)',
+        'rgb(75, 192, 192)',
+        'rgb(54, 162, 235)'
       ]
       
-    }]
+    }],
   };
 
-  return <Bar data={data} />
+  return <Bar data={data}  options= {
+    labels= {
+      fontColor: "blue"
+    }
+    }/>
 }
 
 export default BarChart;                  
