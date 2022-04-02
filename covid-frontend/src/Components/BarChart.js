@@ -20,11 +20,7 @@ function BarChart({ ChartData }) {
     }],
   };
 
-  return <Bar data={data}  options= {
-    labels= {
-      fontColor: "blue"
-    }
-    }/>
+  return <Bar data={data} />
 }
 
 export default BarChart;                  
